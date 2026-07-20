@@ -1,0 +1,322 @@
+/* ---------- Reset & base ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color: #222;
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ---------- Top Info Bar ---------- */
+.top-info-bar {
+  background: #1a2b48;
+  color: #fff;
+  font-size: 0.85rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding: 0.5rem 2rem;
+  align-items: center;
+}
+
+.top-info-bar span {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.top-info-bar .motto {
+  margin-left: auto;
+  font-style: italic;
+}
+
+/* ---------- Navbar ---------- */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.navbar .logo img {
+  height: 50px;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 1.8rem;
+}
+
+.nav-links a {
+  font-weight: 600;
+  color: #1a2b48;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover {
+  color: #d4a017;
+}
+
+/* ---------- Footer ---------- */
+.footer {
+  background: #1a2b48;
+  color: #fff;
+  text-align: center;
+  padding: 1.2rem;
+  margin-top: 3rem;
+  font-size: 0.85rem;
+}
+
+/* ---------- Home page ---------- */
+.home-page .swiper {
+  width: 100%;
+  height: 420px;
+}
+
+.home-page .swiper img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+}
+
+.home-intro {
+  max-width: 800px;
+  margin: 2.5rem auto;
+  text-align: center;
+  padding: 0 1.5rem;
+}
+
+.home-intro h1 {
+  font-size: 2rem;
+  color: #1a2b48;
+  margin-bottom: 1rem;
+}
+
+/* ---------- About / Admissions ---------- */
+.about-page,
+.admissions-page {
+  max-width: 800px;
+  margin: 2.5rem auto;
+  padding: 0 1.5rem;
+}
+
+.about-page h1,
+.admissions-page h1 {
+  color: #1a2b48;
+  margin-bottom: 1rem;
+}
+
+.admissions-page img {
+  border-radius: 8px;
+  margin: 1rem 0;
+}
+
+/* ---------- Events page ---------- */
+.events-page {
+  max-width: 1100px;
+  margin: 2.5rem auto;
+  padding: 0 1.5rem;
+}
+
+.events-page h1 {
+  color: #1a2b48;
+  margin-bottom: 1.5rem;
+}
+
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.event-card {
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.event-card img {
+  height: 180px;
+  object-fit: cover;
+}
+
+.event-card h3,
+.event-card .event-date,
+.event-card p {
+  padding: 0 1rem;
+}
+
+.event-card h3 {
+  margin-top: 0.8rem;
+  color: #1a2b48;
+}
+
+.event-card .event-date {
+  display: block;
+  font-size: 0.8rem;
+  color: #888;
+  margin: 0.2rem 0 0.5rem;
+}
+
+.event-card p {
+  padding-bottom: 1rem;
+}
+
+/* ---------- Staff page ---------- */
+.staff-page {
+  max-width: 1100px;
+  margin: 2.5rem auto;
+  padding: 0 1.5rem;
+}
+
+.staff-page h1 {
+  color: #1a2b48;
+  margin-bottom: 1.5rem;
+}
+
+.staff-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
+}
+
+.staff-card {
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  padding-bottom: 1rem;
+}
+
+.staff-card img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.staff-card h4 {
+  margin-top: 0.8rem;
+  color: #1a2b48;
+}
+
+/* ---------- Contact page ---------- */
+.contact-page {
+  max-width: 600px;
+  margin: 2.5rem auto;
+  padding: 0 1.5rem;
+}
+
+.contact-page h1 {
+  color: #1a2b48;
+  margin-bottom: 1rem;
+}
+
+.contact-page p {
+  margin-bottom: 0.5rem;
+}
+/* ---------- Hamburger button (hidden on desktop) ---------- */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.6rem;
+  color: #1a2b48;
+  cursor: pointer;
+}
+
+/* ---------- Responsive breakpoints ---------- */
+@media (max-width: 768px) {
+  .top-info-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.4rem;
+    padding: 0.6rem 1.2rem;
+  }
+
+  .top-info-bar .motto {
+    margin-left: 0;
+  }
+
+  .navbar {
+    padding: 1rem 1.2rem;
+    position: relative;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1rem 1.2rem;
+    gap: 1rem;
+    z-index: 10;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .home-page .swiper,
+  .home-page .swiper img {
+    height: 260px;
+  }
+
+  .home-intro h1 {
+    font-size: 1.5rem;
+  }
+
+  .events-grid,
+  .staff-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .events-grid,
+  .staff-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .navbar .logo img {
+    height: 40px;
+  }
+
+  .home-intro,
+  .about-page,
+  .admissions-page,
+  .contact-page {
+    padding: 0 1rem;
+  }
+}
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
